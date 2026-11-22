@@ -1,12 +1,22 @@
 
-// Step 1: Select the paragraph and button
-const message = document.getElementById("message");
-const changeBtn = document.getElementById("changeBtn");
+const generateBtn = document.getElementById("generateBtn");
+const numberList = document.getElementById("numberList");
 
-// Step 2: Create the function
-function changeMessage() {
-    message.textContent = "Hello there!";
+function generateNumbers() {
+
+    
+    numberList.textContent = "";
+
+    
+    for (let i = 1; i <= 5; i++) {
+
+        const listItem = document.createElement("li");
+
+        listItem.textContent = `The number is ${i}`;
+
+        numberList.appendChild(listItem);
+    }
 }
 
-// Step 3: Add click event listener
-changeBtn.addEventListener("click", changeMessage);
+
+generateBtn.addEventListener("click", generateNumbers);
